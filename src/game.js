@@ -5,13 +5,15 @@ function Game(){
   this.currentRoll = 0;
 }
 
+
+
 Game.prototype.roll = function(pins){
   this.rolls[this.currentRoll++] = pins;
 };
 
 Game.prototype.calculateScore = function(){
   var score = this.score
-  // var frameIndex = 0;
+  var frameIndex = 0;
   for (var frameIndex = 0; frameIndex < this.currentRoll; frame++) {
     if (this.isStrike(frameIndex)){
       score += 10 + this.strikeBonus(frameIndex);
@@ -28,15 +30,15 @@ Game.prototype.calculateScore = function(){
   return score
 };
 
-Game.prototype.isSpare = function(frameIndex){
-  var rolls = this.rolls
-  return rolls[frameIndex] + rolls[frameIndex + 1] === 10;
-};
-
-Game.prototype.isStrike = function(frameIndex){
-  var rolls = this.rolls
-  return rolls[frameIndex] === 10;
-};
+// Game.prototype.isSpare = function(frameIndex){
+//   var rolls = this.rolls
+//   return rolls[frameIndex] + rolls[frameIndex + 1] === 10;
+// };
+//
+// Game.prototype.isStrike = function(frameIndex){
+//   var rolls = this.rolls
+//   return rolls[frameIndex] === 10;
+// };
 
 Game.prototype.spareBonus = function(frameIndex){
   var rolls = this.rolls

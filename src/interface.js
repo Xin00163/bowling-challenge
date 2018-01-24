@@ -22,7 +22,25 @@ $(document).ready(function(){
   $('.rollScore').click(function(){
     var score = $(this).html();
     game.roll(score);
-    console.log(game.score)
     afterRoll(score);
   });
+
+// $(document).append(buildGameView(game))
+//
+//   function buildGameView(game){
+//     $container = ${"<div></div>"}
+//     return $container
+//   }
+//
+//   function buildScoreTable(game){
+//     $table = ${"<div></div>"}
+//     return $table
+//   }
+//
+//   function buildTableHeader(game){
+//     var frameView = [];
+//     for (var index = 0; index < game.numberOfFrames){
+//       frameViews.push(buildFrame)
+//     }
+//   }
 });

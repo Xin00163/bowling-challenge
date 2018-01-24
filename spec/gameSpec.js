@@ -15,20 +15,20 @@ describe("Game", function(){
     expect(game.calculateScore()).toEqual(20);
   });
 
-  it("calculates one spare", function(){
-    rollASpare();
-    game.roll(3);
-    rollMany(17,0);
-    expect(game.calculateScore()).toEqual(16);
-  });
-
-  it("calculates one spare in the middle", function(){
-    rollMany(2, 1);
-    rollASpare();
-    game.roll(1);
-    rollMany(15,0);
-    expect(game.calculateScore()).toEqual(14);
-  });
+  // it("calculates one spare", function(){
+  //   rollASpare();
+  //   game.roll(3);
+  //   rollMany(17,0);
+  //   expect(game.calculateScore()).toEqual(16);
+  // });
+  //
+  // it("calculates one spare in the middle", function(){
+  //   rollMany(2, 1);
+  //   rollASpare();
+  //   game.roll(1);
+  //   rollMany(15,0);
+  //   expect(game.calculateScore()).toEqual(14);
+  // });
 
   it("calculates one strike", function(){
     game.roll(10);
